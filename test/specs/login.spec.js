@@ -1,4 +1,4 @@
-const Login = require('./Login.page.js');
+const Login = require('../pages/login.page.js');
 
 const login = new Login();
 
@@ -12,14 +12,6 @@ describe('Login Page', function () {
     // Replace URL with correct login page
     browser.url('./');
   });
-
-  it('should look nice', function () {
-    var results = browser.checkDocument();
-
-    results.forEach(function (result) {
-      expect(result.isWithinMisMatchTolerance).to.equal(true, 'screenshot failure');
-    });
-  })
 
   it('should let you login with valid credentials', function () {
     login.login(validEmail, validPass);

@@ -19,7 +19,7 @@ var mochaTimeout = process.env.DEBUG ? 99999999 : 60000;
 exports.config = {
   // Set a base URL in order to shorten url command calls. If your url parameter starts
   // with "/", then the base url gets prepended.
-  baseUrl: 'http://replaceme/',
+  baseUrl: 'http://automationpractice.com/index.php',
 
   //
   // =================
@@ -45,6 +45,13 @@ exports.config = {
   specs: [
     './test/**/*.spec.js'
   ],
+    suites: {
+        login: [
+            './test/specs/login.spec.js'
+        ],
+        register: [
+            './test/specs/register.spec.js'
+        ]},
   // Patterns to exclude.
   exclude: [
     './test/**/*.page.js'

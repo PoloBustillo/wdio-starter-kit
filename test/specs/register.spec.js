@@ -1,4 +1,4 @@
-const Register = require('./Register.page.js');
+const Register = require('../pages/register.page.js');
 
 const register = new Register();
 

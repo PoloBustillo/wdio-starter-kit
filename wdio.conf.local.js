@@ -5,7 +5,7 @@ var prodConfig = require('./wdio.conf.js').config;
 
 // clone prod config and add new properties/overrides
 var localConfig = Object.assign(prodConfig, {
-  baseUrl: 'http://localhost',
+  baseUrl: 'http://automationpractice.com/index.php',
 
   capabilities: [{
     browserName: 'chrome'
@@ -22,10 +22,10 @@ var localConfig = Object.assign(prodConfig, {
   },
   afterTest: function (test) {
     if (!test.passed) {
-      notifier.notify({
+      /*notifier.notify({
         title: 'Test failure!',
         message: test.parent + ' ' + test.title
-      });
+      });*/
     }
   },
   onComplete: function (exitCode) {
