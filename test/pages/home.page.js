@@ -1,21 +1,18 @@
-class Login {
+class HomePage {
   // Replace these selectors
-  get email () { return $('input[name="email"]'); }
-  get password () { return $('input[name="password"]'); }
-  get submit () { return $('button*=Login'); }
-  get signUpLink () { return $('*=Sign Up'); }
+  get signInLink () { return $('//a[contains(text(),"Sign in")]'); }
+  get manageAccountsFooterLink() { return $('h4*=Store')}
 
-  login (email, password) {
-    this.email.setValue(email);
-    this.password.setValue(password);
 
-    this.submit.click();
+  clickSignInButton () {
+    this.signInLink.click();
   }
 
-  isLoggedIn () {
-    // Replace this with an Boolean response that identifies if you're logged in
-    // example: return browser.getUrl().includes('REPLACEME');
+  scrollToFooter() {
+    console.log(this.manageAccountsFooterLink.getText());
+    browser.scroll(0, 8150);
   }
+
 }
 
-module.exports = Login;
+module.exports = HomePage;

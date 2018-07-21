@@ -1,9 +1,8 @@
 class Login {
   // Replace these selectors
   get email () { return $('input[name="email"]'); }
-  get password () { return $('input[name="password"]'); }
-  get submit () { return $('button*=Login'); }
-  get signUpLink () { return $('*=Sign Up'); }
+  get password () { return $('input[name="passwd"]'); }
+  get submit () { return $('button*=Sign in'); }
 
   login (email, password) {
     this.email.setValue(email);
@@ -15,6 +14,7 @@ class Login {
   isLoggedIn () {
     // Replace this with an Boolean response that identifies if you're logged in
     // example: return browser.getUrl().includes('REPLACEME');
+      return false;
   }
 }
 
